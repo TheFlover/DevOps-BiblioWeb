@@ -1,36 +1,5 @@
 # BiblioWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
-# Projet
-
-
-
 # Outils utilisés
 
 ## Utilisation de Git-cz - Commitizen
@@ -128,3 +97,17 @@ En utilisant une CI de déploiement avec Docker, nous avons la flexibilité de d
 En utilisant une CI de déploiement avec Docker, nous avons besoin de compétences techniques pour configurer et déployer notre application. Cela peut être considéré comme un inconvénient, mais cela nous donne également un plus grand contrôle sur notre infrastructure. Avec Versel, nous n'avons pas besoin de compétences techniques pour déployer notre application.
 
 En somme, nous avons choisi d'utiliser une CI de déploiement avec Docker pour avoir un contrôle total sur l'environnement de production, personnaliser l'infrastructure, réduire les coûts, avoir plus de flexibilité et avoir besoin de compétences techniques pour mieux contrôler notre infrastructure.
+
+## Utilisation de Git
+
+Le projet utilise un système de gestion de version Git pour gérer efficacement les modifications du code source. Trois branches principales sont utilisées pour organiser le flux de travail :
+
+- La branche master est la branche principale qui contient la version de production du code source. Cette branche ne doit être mise à jour que lorsqu'une nouvelle version stable est prête à être déployée.
+
+- La branche dev est utilisée pour le développement continu et est la branche sur laquelle les développeurs travaillent au quotidien. Cette branche contient les dernières modifications en cours et peut contenir des bogues et des erreurs.
+
+- La branche rec (pour recette) est utilisée pour les tests de validation avant la mise en production. Cette branche est créée à partir de dev et contient les modifications terminées qui ont été testées et validées.
+
+En plus des branches principales, des branches de fonctionnalités (features) sont également créées pour les développements spécifiques. Chaque branche de fonctionnalité est nommée selon la convention suivante : ft/nom-de-la-fonctionnalité. Lorsqu'une fonctionnalité est terminée, la branche de fonctionnalité est fusionnée dans dev.
+
+Le système de numérotation de version suit le format suivant : MAJOR.MINOR.PATCH. Le numéro majeur (MAJOR) est mis à jour lorsqu'une nouvelle version avec des fonctionnalités majeures est déployée. Le numéro mineur (MINOR) est mis à jour lorsqu'une nouvelle fonctionnalité est ajoutée. Le numéro de correctif (PATCH) est mis à jour pour les correctifs de bogues mineurs et les améliorations de performances.

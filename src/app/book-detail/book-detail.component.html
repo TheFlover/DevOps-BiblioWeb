@@ -1,7 +1,11 @@
-<div *ngIf="book">
+<div class="book-details" *ngIf="book">
     <h2>{{ book.title }}</h2>
-    <img [src]="book.imageUrl" alt="{{ book.title }}">
-    <p>{{ book.author }}</p>
-    <p>{{ book.description }}</p>
-    <button (click)="goBack()">Retour</button>
+    <div class="book-info">
+        <img [src]="book.imageUrl" alt="{{ book.title }}">
+        <div class="book-description">
+            <p class="book-author">{{ book.author }}</p>
+            <p class="book-text">{{ book.description }}</p>
+        </div>
+    </div>
+    <button class="btn-back" (click)="goBack()">Retour</button>
 </div>
