@@ -30,7 +30,7 @@ Dans ce projet, nous utilisons ESLint pour améliorer la qualité de notre code 
 
 ### Détection rapide des erreurs et des problèmes de style
 
-ESLint nous permet de détecter rapidement les erreurs de syntaxe, les problèmes de style et les pratiques de codage potentiellement dangereuses. Cela nous permet de corriger ces erreurs avant que le code ne soit fusionné dans la branche principale, ce qui réduit le risque d'introduire des bogues et facilite la maintenance du code.
+ESLint nous permet de détecter rapidement les erreurs de syntaxe, les problèmes de style et les pratiques de codage potentiellement dangereuses. Cela nous permet de corriger ces erreurs avant que le code ne soit fusionné dans la branche principale, ce qui réduit le risque d'introduire des bugs et facilite la maintenance du code.
 
 ### Cohérence du style de code
 
@@ -104,10 +104,29 @@ Le projet utilise un système de gestion de version Git pour gérer efficacement
 
 - La branche master est la branche principale qui contient la version de production du code source. Cette branche ne doit être mise à jour que lorsqu'une nouvelle version stable est prête à être déployée.
 
-- La branche dev est utilisée pour le développement continu et est la branche sur laquelle les développeurs travaillent au quotidien. Cette branche contient les dernières modifications en cours et peut contenir des bogues et des erreurs.
+- La branche dev est utilisée pour le développement continu et est la branche sur laquelle les développeurs travaillent au quotidien. Cette branche contient les dernières modifications en cours et peut contenir des bugs et des erreurs.
 
 - La branche rec (pour recette) est utilisée pour les tests de validation avant la mise en production. Cette branche est créée à partir de dev et contient les modifications terminées qui ont été testées et validées.
 
 En plus des branches principales, des branches de fonctionnalités (features) sont également créées pour les développements spécifiques. Chaque branche de fonctionnalité est nommée selon la convention suivante : ft/nom-de-la-fonctionnalité. Lorsqu'une fonctionnalité est terminée, la branche de fonctionnalité est fusionnée dans dev.
 
-Le système de numérotation de version suit le format suivant : MAJOR.MINOR.PATCH. Le numéro majeur (MAJOR) est mis à jour lorsqu'une nouvelle version avec des fonctionnalités majeures est déployée. Le numéro mineur (MINOR) est mis à jour lorsqu'une nouvelle fonctionnalité est ajoutée. Le numéro de correctif (PATCH) est mis à jour pour les correctifs de bogues mineurs et les améliorations de performances.
+Le système de numérotation de version suit le format suivant : MAJOR.MINOR.PATCH. Le numéro majeur (MAJOR) est mis à jour lorsqu'une nouvelle version avec des fonctionnalités majeures est déployée. Le numéro mineur (MINOR) est mis à jour lorsqu'une nouvelle fonctionnalité est ajoutée. Le numéro de correctif (PATCH) est mis à jour pour les correctifs de bugs mineurs et les améliorations de performances.
+
+## Utilisation des tests unitaires
+
+Dans ce projet, l'utilisation de tests unitaires (.spec.ts) a été mise en place dans le cadre de la méthodologie DevOps. Ces tests permettent de vérifier que chaque fonctionnalité du code est opérationnelle et de prévenir les erreurs avant qu'elles ne se propagent à travers le système.
+
+Les tests unitaires ont été ajoutés dans les processus de build et de déploiement en tant que tâches automatisées pour assurer que chaque nouvelle fonctionnalité ou modification de code est testée avant d'être intégrée à la branche de développement (dev) ou de production (master).
+
+En outre, les tests unitaires ont également permis d'assurer la qualité de l'ensemble du code et de faciliter la maintenance du projet en évitant les régressions. En effet, en cas de modification du code, les tests unitaires associés sont automatiquement lancés pour s'assurer que les fonctionnalités existantes ne sont pas impactées par cette modification.
+
+En somme, l'utilisation des tests unitaires a permis de renforcer la qualité et la stabilité du projet dans le cadre de la méthodologie DevOps.
+
+## Autres types de tests utilisés
+
+## Utilisation de Kubernetes
+
+## Mise en place de la CI en fonction de la branche :
+### Branch Master
+### Branch Dev
+### Branch Rec
