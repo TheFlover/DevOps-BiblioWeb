@@ -108,21 +108,21 @@ Le projet utilise un système de gestion de version Git pour gérer efficacement
 
 - La branche rec (pour recette) est utilisée pour les tests de validation avant la mise en production. Cette branche est créée à partir de dev et contient les modifications terminées qui ont été testées et validées.
 
-En plus des branches principales, des branches de fonctionnalités (features) sont également créées pour les développements spécifiques. Chaque branche de fonctionnalité est nommée selon la convention suivante : ft/nom-de-la-fonctionnalité. Lorsqu'une fonctionnalité est terminée, la branche de fonctionnalité est fusionnée dans dev.
+En plus des branches principales, des branches de fonctionnalités (features) sont également créées pour les développements spécifiques. Chaque branche de fonctionnalité est nommée selon la convention suivante : features/nom-de-la-fonctionnalité. Lorsqu'une fonctionnalité est terminée, la branche de fonctionnalité est fusionnée dans dev.
 
 Le système de numérotation de version suit le format suivant : MAJOR.MINOR.PATCH. Le numéro majeur (MAJOR) est mis à jour lorsqu'une nouvelle version avec des fonctionnalités majeures est déployée. Le numéro mineur (MINOR) est mis à jour lorsqu'une nouvelle fonctionnalité est ajoutée. Le numéro de correctif (PATCH) est mis à jour pour les correctifs de bugs mineurs et les améliorations de performances.
 
 ## Utilisation des tests unitaires
 
-Dans ce projet, l'utilisation de tests unitaires (.spec.ts) a été mise en place dans le cadre de la méthodologie DevOps. Ces tests permettent de vérifier que chaque fonctionnalité du code est opérationnelle et de prévenir les erreurs avant qu'elles ne se propagent à travers le système.
+Dans le cadre de la méthodologie DevOps mise en place pour ce projet, l'utilisation de tests unitaires (.spec.ts) a été privilégiée afin d'assurer la qualité et la stabilité du code.
 
-Les tests unitaires ont été ajoutés dans les processus de build et de déploiement en tant que tâches automatisées pour assurer que chaque nouvelle fonctionnalité ou modification de code est testée avant d'être intégrée à la branche de développement (dev) ou de production (master).
+Les tests unitaires ont été ajoutés au processus de build et de déploiement en tant que tâches automatisées pour vérifier chaque fonctionnalité du code avant d'être intégrée à la branche de développement (dev) ou de production (master). Pour réaliser ces tests, Jasmine et Karma ont été utilisés comme outils de test.
 
-En outre, les tests unitaires ont également permis d'assurer la qualité de l'ensemble du code et de faciliter la maintenance du projet en évitant les régressions. En effet, en cas de modification du code, les tests unitaires associés sont automatiquement lancés pour s'assurer que les fonctionnalités existantes ne sont pas impactées par cette modification.
+Jasmine est un framework de tests unitaires pour JavaScript qui permet de créer des suites de tests et des assertions pour vérifier le comportement des fonctions. Karma est quant à lui un outil de test runner qui permet d'exécuter les tests dans un environnement de navigateur réel ou virtuel.
 
-En somme, l'utilisation des tests unitaires a permis de renforcer la qualité et la stabilité du projet dans le cadre de la méthodologie DevOps.
+L'utilisation des tests unitaires a permis de prévenir les erreurs avant qu'elles ne se propagent à travers le système, de faciliter la maintenance du projet en évitant les régressions et de garantir la qualité de l'ensemble du code.
 
-## Autres types de tests utilisés
+En somme, les tests unitaires ont joué un rôle crucial dans l'amélioration de la qualité et de la stabilité du projet dans le cadre de la méthodologie DevOps.
 
 ## Utilisation de Kubernetes
 
@@ -130,3 +130,6 @@ En somme, l'utilisation des tests unitaires a permis de renforcer la qualité et
 ### Branch Master
 ### Branch Dev
 ### Branch Rec
+
+## Déplacement du Github vers un Gitlab
+
