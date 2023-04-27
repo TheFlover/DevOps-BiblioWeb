@@ -30,4 +30,8 @@ export class BookDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  addBook(): void {
+    this.location.back();
+  }
 }
